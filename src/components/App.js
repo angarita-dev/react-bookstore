@@ -17,8 +17,13 @@ export default function App() {
 
   return (
     <div>
-      <BooksForm categoryList={categoryList} />
-      <BooksList categoryList={categoryList} />
+      <div className="body-container">
+        <BooksList categoryList={categoryList} />
+        <div className="book-form-container">
+          <h2 className="book-form-label">ADD NEW BOOK</h2>
+          <BooksForm categoryList={categoryList} />
+        </div>
+      </div>
     </div>
   );
 }
