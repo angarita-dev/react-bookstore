@@ -16,9 +16,9 @@ const BooksList = props => {
   const { categoryList } = props;
   const { currentFilter } = props;
 
-  const filteredBooks = currentFilter === 'All' ? 
-    books :
-    books.filter(book => currentFilter === book.category);
+  const filteredBooks = currentFilter === 'All'
+    ? books
+    : books.filter(book => currentFilter === book.category);
 
   const booksList = filteredBooks.map(book => {
     const { id, title, category } = book;
@@ -43,7 +43,7 @@ const BooksList = props => {
           <th>Remove</th>
           <th>
             Filter:
-            <CategoryFilter categoryList={categoryList} changeFilter={changeFilter}/>
+            <CategoryFilter categoryList={categoryList} changeFilter={changeFilter} />
           </th>
         </tr>
       </thead>
@@ -58,6 +58,7 @@ BooksList.propTypes = {
   books: PropTypes.array.isRequired,
   removeBook: PropTypes.func.isRequired,
   categoryList: PropTypes.array.isRequired,
+  changeFilter: PropTypes.func.isRequired,
   currentFilter: PropTypes.string.isRequired,
 };
 
