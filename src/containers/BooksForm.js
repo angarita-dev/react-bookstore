@@ -1,6 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-export default class BooksForm extends React.Component {
+// Actions
+import { createBook } from '../actions/index';
+
+class BooksForm extends React.Component {
   static getBookCategories() {
     return [
       'Action',
@@ -26,6 +31,12 @@ export default class BooksForm extends React.Component {
 
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleCategoryChange = this.handleCategoryChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit() {
+    const { createBook } = this.props;
+    createBook(this.state);
   }
 
   handleTitleChange(e) {
@@ -72,7 +83,21 @@ export default class BooksForm extends React.Component {
         >
           {bookOptions}
         </select>
+        <span
+          onClick={this.handleSubmit}
+          onKeyPress={this.handleSubmit}
+          role="button"
+          tabIndex="0"
+        >
+          Save book
+        </span>
       </div>
     );
   }
 }
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+export default connect(null, { createBook })(BooksForm);
