@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { generateId, books } from './book';
+import filter from './filter';
 
 export const DEFAULT_STATE = {
   books: [
@@ -19,6 +20,7 @@ export const DEFAULT_STATE = {
       category: 'Horror',
     },
   ],
+  filter: 'All',
 };
 
-export default combineReducers({ books });
+export default combineReducers({ books, filter });
