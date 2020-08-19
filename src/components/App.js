@@ -17,8 +17,8 @@ export default function App() {
 
   return (
     <div>
-      <BooksForm categoryList={categoryList}/>
-      <BooksList categoryList={categoryList}/>
+      <BooksForm categoryList={categoryList} />
+      <BooksList categoryList={categoryList} />
     </div>
   );
 }
