@@ -20,7 +20,6 @@ export const DEFAULT_STATE = {
       category: 'Horror',
     },
   ],
-  filter: 'All',
 };
 
 export default combineReducers({ books, filter });
