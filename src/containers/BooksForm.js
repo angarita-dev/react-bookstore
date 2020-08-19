@@ -29,8 +29,7 @@ class BooksForm extends React.Component {
       category: defaultBookCategory,
     };
 
-    this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleCategoryChange = this.handleCategoryChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -39,17 +38,11 @@ class BooksForm extends React.Component {
     createBook(this.state);
   }
 
-  handleTitleChange(e) {
-    const { value } = e.target;
-    const newState = { title: value };
+  handleChange(e) {
+    const { name, value } = e.target;
+    const newState = {};
 
-    this.setState(newState);
-  }
-
-  handleCategoryChange(e) {
-    const { value } = e.target;
-    const newState = { category: value };
-
+    newState[name] = value;
     this.setState(newState);
   }
 
@@ -72,14 +65,15 @@ class BooksForm extends React.Component {
         <input
           type="text"
           id="book-title-input"
+          name="title"
           value={title}
-          onChange={this.handleTitleChange}
+          onChange={this.handleChange}
         />
         <select
-          name="categories"
+          name="category"
           id="book-category-input"
           value={category}
-          onChange={this.handleCategoryChange}
+          onChange={this.handleChange}
         >
           {bookOptions}
         </select>
