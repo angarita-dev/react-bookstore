@@ -14,13 +14,13 @@ export default function CategoryFilter(props) {
     </option>
   ));
 
-  const handleFilterChange = (event) => {
+  const handleFilterChange = event => {
     const { name, value } = event.target;
     const newState = {};
 
     newState[name] = value;
     changeFilter(newState);
-  }
+  };
 
   return (
     <select
