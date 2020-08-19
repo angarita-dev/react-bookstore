@@ -34,23 +34,28 @@ const BooksList = props => {
   });
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Remove</th>
-          <th>
-            Filter:
-            <CategoryFilter categoryList={categoryList} changeFilter={changeFilter} />
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {booksList}
-      </tbody>
-    </table>
+    <div>
+      <span>
+        Filter by category:
+        <CategoryFilter
+          categoryList={categoryList}
+          changeFilter={changeFilter}
+        />
+      </span>
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          {booksList}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
