@@ -35,6 +35,10 @@ const BooksList = props => {
           <th>Title</th>
           <th>Category</th>
           <th>Remove</th>
+          <th>
+            Filter:
+            <CategoryFilter categoryList={categoryList} />
+          </th>
         </tr>
       </thead>
       <tbody>
