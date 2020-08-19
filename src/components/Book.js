@@ -16,8 +16,11 @@ export default function Book(props) {
       <div className="book-left-container">
         <h3 className="book-category">{category}</h3>
         <h2 className="book-title">{title}</h2>
+        <h3 className="book-author">Unknown author</h3>
         <ul className="book-actions">
-          <li>Documents</li>
+          <li>
+            <span>Comments</span>
+          </li>
           <li>
             <span
               onClick={handleBookRemove}
@@ -25,10 +28,12 @@ export default function Book(props) {
               role="button"
               tabIndex="0"
             >
-            X
+            Remove 
             </span>
           </li>
-          <li>Edit</li>
+          <li>
+            <span>Edit</span>
+          </li>
         </ul>
       </div>
     </div>
