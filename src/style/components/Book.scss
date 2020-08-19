@@ -1,0 +1,93 @@
+@import '../shared/variables';
+
+.book-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 32px 27px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: solid 1px $border-grey;
+  background-color: $true-white;
+
+  .book-left-container {
+    .book-category {
+      margin: 0;
+      margin-bottom: 2px;
+      color: $black-three;
+      font-family: $text-font;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      opacity: 0.5;
+    }
+
+    .book-title {
+      margin: 0;
+      margin-top: 2px;
+      font-family: $title-font;
+      font-size: 22px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.2px;
+      color: $black-three;
+    }
+
+    .book-author {
+      margin: 0;
+      margin-bottom: 9px;
+      font-family: $title-font;
+      font-weight: 300;
+      font-size: 14px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $pale-blue;
+    }
+
+    .book-actions {
+      margin: 0;
+      padding: 0;
+      margin-top: 9px;
+      height: 24px;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+
+      li {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        span {
+          margin-right: 15px;
+          text-align: center;
+          font-family: $title-font;
+          font-weight: 300;
+          font-size: 14px;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: $pale-blue;
+        }
+      }
+
+      li:first-of-type + li {
+        span {
+          padding: 0 15px;
+          border: solid 1px $border-grey;
+          border-top: none;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
