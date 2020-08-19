@@ -6,11 +6,13 @@ import { connect } from 'react-redux';
 import { removeBook } from '../actions/index';
 
 // Components
+import CategoryFilter from '../components/CategoryFilter';
 import Book from '../components/Book';
 
 const BooksList = props => {
   const { books } = props;
   const { removeBook } = props;
+  const { categoryList } = props;
 
   const booksList = books.map(book => {
     const { id, title, category } = book;
@@ -45,6 +47,7 @@ const BooksList = props => {
 BooksList.propTypes = {
   books: PropTypes.array.isRequired,
   removeBook: PropTypes.func.isRequired,
+  categoryList: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = state => ({
