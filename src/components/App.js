@@ -12,7 +12,7 @@ export default function App() {
     'Horror',
     'Kids',
     'Learning',
-    'Sci-fi',
+    'Sci-Fi',
   ];
 
   return (
