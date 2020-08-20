@@ -1,6 +1,7 @@
 import React from 'react';
 
 // Components
+import NavBar from '../components/NavBar';
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
 
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <div className="app-container">
+      <NavBar />
       <div className="body-container">
         <BooksList categoryList={categoryList} />
         <div className="book-form-container">
