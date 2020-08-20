@@ -101,8 +101,31 @@
 
     .percentage-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
+
+      .percentage-circle-container {
+        height: 68px;
+        width: 68px;
+        margin: 0 22px;
+
+        .progress-ring {
+          height: 100%;
+          width: 100%;
+
+          .progress-ring-circle {
+            stroke: $blue;
+            stroke-dasharray: 150.796447372 150.796447372;
+            stroke-dashoffset: 45.2389342117;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+          }
+
+          .ring-circle {
+            stroke: $border-grey;
+          }
+        }
+      }
 
       .percentage {
         margin: 0;

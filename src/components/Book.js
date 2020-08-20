@@ -37,8 +37,32 @@ export default function Book(props) {
       </div>
       <div className="book-right-container">
         <div className="percentage-container">
-          <h1 className="percentage">70%</h1>
-          <h2 className="percentage-label">Completed</h2>
+          <div className="percentage-circle-container">
+            <svg className="progress-ring">
+              <circle
+                className="ring-circle"
+                strokeWidth="5"
+                fill="transparent"
+                r="24"
+                cx="34"
+                cy="34"
+              />
+
+              <circle
+                className="progress-ring-circle"
+                strokeWidth="5"
+                fill="transparent"
+                stroke="#307bbe"
+                r="24"
+                cx="34"
+                cy="34"
+              />
+            </svg>
+          </div>
+          <div className="percentage-info-container">
+            <h1 className="percentage">70%</h1>
+            <h2 className="percentage-label">Completed</h2>
+          </div>
         </div>
         <span className="divider" />
         <div className="info-container">
