@@ -1,31 +1,97 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-export default function BooksForm() {
-  const bookCategories = [
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi',
-  ];
+// Actions
+import { createBook } from '../actions/index';
 
-  const bookOptions = bookCategories.map(category => (
-    <option
-      key={category}
-      value={category}
-    >
-      {category}
-    </option>
-  ));
+class BooksForm extends React.Component {
+  static getBookCategories() {
+    return [
+      'Action',
+      'Biography',
+      'History',
+      'Horror',
+      'Kids',
+      'Learning',
+      'Sci-Fi',
+    ];
+  }
 
-  return (
-    <div className="book-form">
-      <input type="text" id="book-title-input" placeholder="Title" />
-      <select name="categories" id="book-category-input" defaultValue={bookCategories[0]}>
-        {bookOptions}
-      </select>
-    </div>
-  );
+  constructor(props) {
+    super(props);
+
+    const defaultBookTitle = 'Book title';
+    const defaultBookCategory = BooksForm.getBookCategories()[0];
+
+    this.state = {
+      title: defaultBookTitle,
+      category: defaultBookCategory,
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit() {
+    const { createBook } = this.props;
+    createBook(this.state);
+  }
+
+  handleChange(e) {
+    const { name, value } = e.target;
+    const newState = {};
+
+    newState[name] = value;
+    this.setState(newState);
+  }
+
+  render() {
+    const { title, category } = this.state;
+
+    const bookCategories = BooksForm.getBookCategories();
+
+    const bookOptions = bookCategories.map(category => (
+      <option
+        key={category}
+        value={category}
+      >
+        {category}
+      </option>
+    ));
+
+    return (
+      <div className="book-form">
+        <input
+          type="text"
+          id="book-title-input"
+          name="title"
+          value={title}
+          onChange={this.handleChange}
+        />
+        <select
+          name="category"
+          id="book-category-input"
+          value={category}
+          onChange={this.handleChange}
+        >
+          {bookOptions}
+        </select>
+        <span
+          onClick={this.handleSubmit}
+          onKeyPress={this.handleSubmit}
+          role="button"
+          tabIndex="0"
+        >
+          Save book
+        </span>
+      </div>
+    );
+  }
 }
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+export default connect(null, { createBook })(BooksForm);
