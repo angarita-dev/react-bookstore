@@ -53,27 +53,28 @@ class BooksForm extends React.Component {
       <div className="book-form">
         <input
           type="text"
-          id="book-title-input"
+          className="book-title-input"
           name="title"
           value={title}
           onChange={this.handleChange}
         />
         <select
           name="category"
-          id="book-category-input"
+          className="book-category-input"
           value={category}
           onChange={this.handleChange}
         >
           {bookOptions}
         </select>
-        <span
+        <div
           onClick={this.handleSubmit}
           onKeyPress={this.handleSubmit}
+          className="submit-book"
           role="button"
           tabIndex="0"
         >
-          Save book
-        </span>
+          ADD BOOK  
+        </div>
       </div>
     );
   }

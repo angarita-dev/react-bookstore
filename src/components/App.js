@@ -16,7 +16,7 @@ export default function App() {
   ];
 
   return (
-    <div>
+    <div className="app-container">
       <div className="body-container">
         <BooksList categoryList={categoryList} />
         <div className="book-form-container">
