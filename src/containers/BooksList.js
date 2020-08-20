@@ -35,13 +35,15 @@ const BooksList = props => {
 
   return (
     <div className="book-list">
-      <span>
-        Filter by category:
+      <div className="category-filter-container">
+        <span className="category-filter-label">
+          CATEGORY:
+        </span>
         <CategoryFilter
           categoryList={categoryList}
           changeFilter={changeFilter}
         />
-      </span>
+      </div>
       {booksList}
     </div>
   );
