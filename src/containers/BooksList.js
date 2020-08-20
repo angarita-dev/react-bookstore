@@ -10,11 +10,9 @@ import CategoryFilter from '../components/CategoryFilter';
 import Book from '../components/Book';
 
 const BooksList = props => {
-  const { books } = props;
-  const { removeBook } = props;
-  const { changeFilter } = props;
-  const { categoryList } = props;
-  const { currentFilter } = props;
+  const {
+    books, removeBook, changeFilter, categoryList, currentFilter,
+  } = props;
 
   const filteredBooks = currentFilter === 'All'
     ? books
