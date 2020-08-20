@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Book(props) {
-  const { id } = props;
-  const { title } = props;
-  const { category } = props;
-  const { removeBook } = props;
+  const {
+    id, title, category, removeBook,
+  } = props;
 
   const handleBookRemove = () => {
     removeBook(id);
