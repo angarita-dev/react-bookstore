@@ -90,4 +90,91 @@
       }
     }
   }
+
+  .book-right-container {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    .percentage-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .percentage {
+        margin: 0;
+        font-size: 32px;
+        font-family: $text-font;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $black-three;
+      }
+
+      .percentage-label {
+        opacity: 0.5;
+        margin: 0;
+        font-size: 14px;
+        font-family: $text-font;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $black-three;
+      }
+    }
+
+    .divider {
+      content: "";
+      height: 70px;
+      margin: 0 69px;
+      border-right: 1px solid $border-grey;
+    }
+
+    .info-container {
+      .chapter-label {
+        margin: 0;
+        opacity: 0.5;
+        font-family: $title-font;
+        font-size: 13px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $black-three;
+      }
+
+      .chapter {
+        margin: 7px 0 23px;
+        font-family: $title-font;
+        font-size: 16px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.4px;
+        color: $black-three;
+      }
+
+      .update-progress-button {
+        padding: 7px 25px;
+        border-radius: 3px;
+        background-color: $blue;
+        font-family: $title-font;
+        font-size: 13px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        color: $true-white;
+      }
+    }
+  }
 }
