@@ -36,6 +36,20 @@ export default function Book(props) {
           </li>
         </ul>
       </div>
+      <div className="book-right-container">
+        <div className="percentage-container">
+          <h1 className="percentage">70%</h1>
+          <h2 className="percentage-label">Completed</h2>
+        </div>
+        <span className="divider" />
+        <div className="info-container">
+          <h3 className="chapter-label">CURRENT CHAPTER</h3>
+          <h2 className="chapter">Chapter 1: "Introduction"</h2>
+          <div className="update-progress-button">
+            UPDATE PROGRESS
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
