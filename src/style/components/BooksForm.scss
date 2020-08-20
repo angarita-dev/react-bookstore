@@ -1,0 +1,68 @@
+@import '../shared/variables';
+
+.book-form-container {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 1px solid $border-grey;
+
+  .book-form-label {
+    margin: 9px 0 19px;
+    font-size: 20px;
+    font-family: $text-font;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.18px;
+    color: $grey;
+  }
+
+  .book-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .book-title-input, .book-category-input {
+      border-radius: 4px;
+      border: solid 1px $border-grey;
+      padding: 13px 17px;
+      font-family: $text-font;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: -0.15px;
+      color: $light-grey;
+      background-color: $true-white;
+    }
+
+    input {
+      width: 50%;
+    }
+
+    select {
+      margin: 0 34px;
+      width: 35%;
+    }
+
+    .submit-book {
+      color: $true-white;
+      background-color: $blue;
+      border-radius: 3px;
+      font-family: $title-font;
+      font-size: 13px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.5px;
+      text-align: center;
+      padding: 15px 22px;
+      width: 15%;
+      cursor: pointer;
+    }
+  }
+
+}
