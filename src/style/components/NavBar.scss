@@ -1,0 +1,49 @@
+@import '../shared/variables';
+
+.nav-bar {
+  margin: 0;
+  width: 100%;
+  padding: 0 100px; 
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $border-grey;
+  background-color: $true-white;
+  z-index: 1;
+
+  .left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .title {
+      font-size: 30px;
+      font-family: $text-font;
+      color: $blue;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+
+    .nav-link {
+      margin: 0;
+      margin-left: 44px;
+      font-size: 13px;
+      font-family: $text-font;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.9px;
+      opacity: 0.5;
+      color: $black-three;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
