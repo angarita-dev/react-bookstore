@@ -1,9 +1,12 @@
 @import '../shared/variables';
 
-.body-container {
+.app-container {
   height: 100%;
-  width: 100%;
-  padding: 37px 100px;
-  box-sizing: border-box;
-  background-color: $pale-grey;
+  .body-container {
+    min-height: 100%;
+    width: 100%;
+    padding: 37px 100px;
+    box-sizing: border-box;
+    background-color: $pale-grey;
+  }
 }
