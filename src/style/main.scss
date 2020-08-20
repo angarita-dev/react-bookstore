@@ -5,10 +5,10 @@
 @import './components/BooksForm';
 @import './components/NavBar';
 @import './components/BooksFilter';
-@import './components/BooksFilter';
 
 html {
   height: 100%;
+
   body {
     height: 100%;
     margin: 0;
@@ -21,7 +21,8 @@ html {
   }
 }
 
-select, input {
+select,
+input {
   transition: color 0.5s ease-in;
 
   &:focus {

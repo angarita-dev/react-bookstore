@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import NavBar from '../components/NavBar';
+import NavBar from './NavBar';
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
 

@@ -28,7 +28,7 @@ export default function Book(props) {
               role="button"
               tabIndex="0"
             >
-            Remove 
+              Remove
             </span>
           </li>
           <li>
@@ -44,7 +44,7 @@ export default function Book(props) {
         <span className="divider" />
         <div className="info-container">
           <h3 className="chapter-label">CURRENT CHAPTER</h3>
-          <h2 className="chapter">Chapter 1: "Introduction"</h2>
+          <h2 className="chapter">Chapter 1: &quot;Introduction&quot;</h2>
           <div className="update-progress-button">
             UPDATE PROGRESS
           </div>

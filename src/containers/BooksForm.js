@@ -73,7 +73,7 @@ class BooksForm extends React.Component {
           role="button"
           tabIndex="0"
         >
-          ADD BOOK  
+          ADD BOOK
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function NavBar() {
-  return(
+  return (
     <div className="nav-bar">
       <div className="left-container">
         <h1 className="title">Bookstore CMS</h1>
