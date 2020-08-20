@@ -1,6 +1,7 @@
+import { v4 as uuidv4 } from 'uuid';
 import { CREATE_BOOK, REMOVE_BOOK } from '../index';
 
-export const generateId = () => Math.floor(Math.random() * (99999 - 10000) + 10000);
+export const generateId = () => uuidv4();
 
 export const books = (state = [], action) => {
   switch (action.type) {

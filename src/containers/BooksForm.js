@@ -25,6 +25,10 @@ class BooksForm extends React.Component {
 
   handleSubmit() {
     const { createBook } = this.props;
+    const { title } = this.state;
+
+    if (title.length === 0 || !title.trim()) return; // Empty validation
+
     createBook(this.state);
   }
 
