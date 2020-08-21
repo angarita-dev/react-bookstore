@@ -25,7 +25,7 @@ export default function CategoryFilter(props) {
   return (
     <select
       name="filter"
-      id="category-filter"
+      className="category-filter-select"
       onChange={handleFilterChange}
     >
       {filterOptions}
