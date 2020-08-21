@@ -6,23 +6,13 @@ import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
 class BooksForm extends React.Component {
-  static getBookCategories() {
-    return [
-      'Action',
-      'Biography',
-      'History',
-      'Horror',
-      'Kids',
-      'Learning',
-      'Sci-Fi',
-    ];
-  }
-
   constructor(props) {
     super(props);
 
+    const { categoryList } = this.props;
+
     const defaultBookTitle = 'Book title';
-    const defaultBookCategory = BooksForm.getBookCategories()[0];
+    const defaultBookCategory = categoryList[0];
 
     this.state = {
       title: defaultBookTitle,
@@ -35,6 +25,10 @@ class BooksForm extends React.Component {
 
   handleSubmit() {
     const { createBook } = this.props;
+    const { title } = this.state;
+
+    if (title.length === 0 || !title.trim()) return; // Empty validation
+
     createBook(this.state);
   }
 
@@ -47,11 +41,10 @@ class BooksForm extends React.Component {
   }
 
   render() {
+    const { categoryList } = this.props;
     const { title, category } = this.state;
 
-    const bookCategories = BooksForm.getBookCategories();
-
-    const bookOptions = bookCategories.map(category => (
+    const bookOptions = categoryList.map(category => (
       <option
         key={category}
         value={category}
@@ -92,6 +85,7 @@ class BooksForm extends React.Component {
 
 BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
+  categoryList: PropTypes.array.isRequired,
 };
 
 export default connect(null, { createBook })(BooksForm);
