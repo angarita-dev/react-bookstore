@@ -1,0 +1,31 @@
+// Importing partials
+@import './components/App';
+@import './components/Book';
+@import './components/BooksList';
+@import './components/BooksForm';
+@import './components/NavBar';
+@import './components/BooksFilter';
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    #root {
+      height: 100%;
+    }
+  }
+}
+
+select,
+input {
+  transition: color 0.5s ease-in;
+
+  &:focus {
+    color: $black-three !important;
+  }
+}

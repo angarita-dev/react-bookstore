@@ -1,0 +1,13 @@
+@import '../shared/variables';
+
+.app-container {
+  height: 100%;
+
+  .body-container {
+    min-height: 100%;
+    width: 100%;
+    padding: 133px 100px 37px;
+    box-sizing: border-box;
+    background-color: $pale-grey;
+  }
+}
